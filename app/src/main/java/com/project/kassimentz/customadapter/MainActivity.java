@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private void updateLista() {
 
         ListView lista = (ListView) findViewById(R.id.listView);
+        //chamando o custom adapter
         ContatoAdapter adapter = new ContatoAdapter(MainActivity.this, listaContatos);
         lista.setAdapter(adapter);
     }
