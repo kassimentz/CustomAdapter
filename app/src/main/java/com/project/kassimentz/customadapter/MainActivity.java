@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.project.kassimentz.customadapter.Adapters.ContatoAdapter;
 import com.project.kassimentz.customadapter.Model.Contato;
 
 import java.util.ArrayList;
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private void updateLista() {
 
         ListView lista = (ListView) findViewById(R.id.listView);
-        //lista.setAdapter(adapter);
+        ContatoAdapter adapter = new ContatoAdapter(MainActivity.this, listaContatos);
+        lista.setAdapter(adapter);
     }
 
 }
